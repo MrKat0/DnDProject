@@ -1,0 +1,26 @@
+{
+  "name": "Kuma",
+  "stats":
+  {
+    "hp": {"max": 53, "current": 53},
+    "mana": {"max": 49, "current": 49},
+    "stamina": 69,
+    "attack": "4d6",
+    "defense": 15,
+    "instinct": 14,
+    "gold": 13
+  },
+  "qualities":
+  {
+    "strength": 14,
+    "intelligence": 7,
+    "technical": 3,
+    "agility": 9,
+    "speed": 14,
+    "resistance": 13,
+    "charisma": 9
+  },
+  "inventory": [],
+  "equipment": [],
+  "history": "Kuma es un vastaya, uno de los pocos (si no es que el unico) descendiente de volibear. El realmente no conoce esto (por que alguien debia decirselo, pero tambien se le olvido hacerlo) y junto a el viene una herencia milenaria: una de las piedras runicas que utilizaba el mismo volibear, pero Kuma no conoce que tiene el poder de utilizarla, entonces tendra que aprender por su cuenta la finalidad de esta piedra runica, a parte de descubrir sus habilidades como descendiente del oso de mil batallas. Kuma viene de un pueblo al que le dicen \"El pueblo de la sal\" en las afueras del freljord, esto debido a que es un gran punto para el mercadeo de diferentes articulos, y los habitantes suelen esparcir sal por las calles para derretir el hielo y asi hacerlo un lugar mas ameno para sus visitantes. Kuma viene de una familia de comerciantes la cual tiene un puesto en el gran mercado de su pueblo, y este ha trabajado ahi por varios anos, conociendo a miles de clientes de toda runaterra que van unicamente a ese pueblo por sus interesantes articulos. Sin embargo, pese a su gran fama de ser un pueblo mercantil, el pueblo de la sal es conocido por que sus habitantes suelen tener un mal temperamento y explotar en una ira frenetica con relativa facilidad."
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Salem",
+  "stats":
+  {
+    "hp": {"max": 91, "current": 91},
+    "mana": {"max": 99, "current": 99},
+    "stamina": 41,
+    "attack": "4d6",
+    "defense": 15,
+    "instinct": 15,
+    "gold": 105
+  },
+  "qualities":
+  {
+    "strength": 9,
+    "intelligence": 13,
+    "technical": 16,
+    "agility": 17,
+    "speed": 16,
+    "resistance": 11,
+    "charisma": 20
+  },
+  "inventory": [],
+  "equipment": [],
+  "history": "Antes una mascota de un gran científico de Piltover, desarrollo inteligencia con el pasar del tiempo y aprendió a hablar y construir artefacto con lo que tenga a la mano, escapo de su dueño con ayuda de otro gato inteligente llegando así a la ciudad de Zaun donde se separó de él, conservando un viejo reloj de cuerda para recordarlo, aprendió a remendar ropa y robar con ayuda de su agilidad y labia. Ahora es un viajero errante que solo vive al día buscando aventuras y dinero."
+}
