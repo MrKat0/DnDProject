@@ -45,7 +45,7 @@ class PlayerForm(object):
 
         self.verticalLayout.addWidget(self.label_2)
 
-        self.throwRegister = QListView(self.verticalLayoutWidget)
+        self.throwRegister = QListWidget(self.verticalLayoutWidget)
         self.throwRegister.setObjectName(u"throwRegister")
         self.throwRegister.setEnabled(False)
 

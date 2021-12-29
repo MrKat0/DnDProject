@@ -1,9 +1,12 @@
 import re
 import socket
 import threading
+from controllers.popup import Popup
 from lib.Views.loginForm import LoginForm
 from PySide2.QtWidgets import QWidget
 from socket import socket as s
+
+FORMAT = 'UTF-8'
 
 class Login(QWidget, LoginForm):
     def __init__(self):
@@ -19,22 +22,32 @@ class Login(QWidget, LoginForm):
         if username != '' and ipAdress != '':
             match = re.match(r'^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$', ipAdress)
             if bool(match) is True:
-                from controllers.player import Player
-                self.playerWindow = Player(username, connection_data)
-                self.playerWindow.show()
-                self.close()
+                client = s(socket.AF_INET, socket.SOCK_STREAM)
+                client.settimeout(500)
+                client.connect(connection_data)
+                client.send(username.encode(FORMAT))
+                login_msg = client.recv(1024).decode(FORMAT)
+                if login_msg == '!DISCONNECT':
+                    self.error = Popup('Error')
+                    self.error.setText('Username already taken')
+                    self.error.show()
+                elif login_msg == '!CONNECTED':
+                    from controllers.player import Player
+                    self.playerWindow = Player(client, username, connection_data)
+                    self.playerWindow.show()
+                    self.close()
+                
             else:
                 self.ipadress.setText('')
+                self.error = Popup('Invalid IP')
+                self.error.setText('Insert a valid ip adress')
+                self.error.show()
 
         elif username != '' and ipAdress == '':
-            pass
+            self.error = Popup('Missing ip')
+            self.error.setText('Insert a ip adress')
+            self.error.show()
         elif username == '' and ipAdress != '':
-            pass
-
-    def receiveInstruction(self):
-        while True:
-            try:
-                instruction = self.client.recv(1024).decode('utf-8')
-            except:
-                self.client.close()
-                break
+            self.error = Popup('Missing username')
+            self.error.setText('Insert a username')
+            self.error.show()

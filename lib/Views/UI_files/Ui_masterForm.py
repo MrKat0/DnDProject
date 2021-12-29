@@ -13,7 +13,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 
-class MasterForm(object):
+class Ui_masterForm(object):
     def setupUi(self, masterForm):
         if not masterForm.objectName():
             masterForm.setObjectName(u"masterForm")

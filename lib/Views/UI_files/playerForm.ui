@@ -53,7 +53,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QListView" name="throwRegister">
+     <widget class="QListWidget" name="throwRegister">
       <property name="enabled">
        <bool>false</bool>
       </property>

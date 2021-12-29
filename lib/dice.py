@@ -19,16 +19,16 @@ class Dice:
         except:
             session = '1'
         if n == 1:
-            t = random.randrange(1, layers)
+            t = random.randrange(1, layers + 1)
             self.history[session] = t
-            return {'Dices': str(f'{n}d{layers}'), 'Throws': t, 'Total': t}
+            return {"Dices": str(f"{n}d{layers}"), "Throws": t, "Total": t}
         else:
             for times in range(0, n):
-                t = random.randrange(1, layers)
+                t = random.randrange(1, layers + 1)
                 throws.append(t)
                 total += t
             self.history[session] = str(throws)[1:-1]
-        return {'Dices': str(f'{n}d{layers}'), 'Throws': str(throws)[1:-1], 'Total': total}
+        return {"Dices": str(f"{n}d{layers}"), "Throws": str(throws)[1:-1], "Total": total}
 
 
 

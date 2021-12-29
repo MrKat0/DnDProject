@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "stats":
+  {
+    "hp": {"max": 0, "current": 0},
+    "mana": {"max": 0, "current": 0},
+    "stamina": 0,
+    "attack": "",
+    "defense": 0,
+    "instinct": 0,
+    "gold": 0
+  },
+  "qualities":
+  {
+    "strength": 0,
+    "intelligence": 0,
+    "technical": 0,
+    "agility": 0,
+    "speed": 0,
+    "resistance": 0,
+    "charisma": 0
+  },
+  "inventory": [],
+  "equipment": [],
+  "history": ""
+}
